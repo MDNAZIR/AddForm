@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<!--?php
+include('database.php');
+session_start();
+if(isset($_SESSION['user_catagory'])){
+    if(strcmp($_SESSION['user_catagory'], 'admin') == 0){        
+    }
+    else {
+        header("location: login1.php");
+    }
+}  else {
+    header("location: login1.php");
+}
+
+?-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+
+/*body  {
+    background-image: url("img/b1.jpg");
+    background-color: #cccccc;
+}*/
+
+
+
+
+</style>
+<script type="text/javascript" href="form-scripts.js"></script>
+
+  <script type="text/javascript">
+    var index=1;
+    showImage(1);
+    function showImage(n){
+      var i;
+      var x=document.getElementByClassName("slides");
+      if(n>x.length){ index=1};
+      if(n<1){ index=x.length};
+
+      for(i=0;i<x.length;i++)
+      {
+        x[i].style.display="none";
+      }
+      x[index-1].style.display="block";
+    }
+    functi plusIndex(n)
+    {
+      index=index+1;
+      showImage(index);
+    }
+
+    autoSlide();
+
+    function autoSlide()
+    {
+      alert("hi");
+       var i;
+      var x=document.getElementByClassName("slides");
+       for(i=0;i<x.length;i++)
+      {
+        x[i].style.display="none";
+      }
+      if(index>x.length){ index=1 }
+      x[index-1].style.display="block";
+      index++;
+      setTimeout(autoSlide,2000)
+    }
+
+  </script>
+    </head>
+    <body>
+ 
+ <div id="container">
+      
+      <img class="slides" src="img/1.jpg" alt=" 4" />
+      <img class="slides" src="img/4.jpg" alt="1" />
+
+      <img class="slides" src="img/2.jpg" alt=" 2" />
+
+    
+    <button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094</button>
+     <button class="btn" onclick="plusIndex(1)" id="btn2">&#10095</button>
+    
+  </div>
+</body>
+  <script type="text/javascript">
+    var index = 1;
+    function plusIndex(n){
+      index = index + n;
+      showImage(index);
+    }
+
+    showImage(1);
+
+    function showImage(n){
+      var i;
+      var x = document.getElementByClassName("slides");
+      if(n > x.length){ index = 1};
+      if(n < 1){ index = x.length};
+
+      for(i=0;i<x.length;i++)
+      {
+        x[i].style.display="none";
+      }
+      x[index-1].style.display="block";
+    }
+    autoSlide();
+
+    function autoSlide()
+    {
+      alert("hi");
+       var i;
+      var x=document.getElementByClassName("slides");
+       for(i=0;i<x.length;i++)
+      {
+        x[i].style.display="none";
+      }
+      if(index>x.length){ index=1 }
+      x[index-1].style.display="block";
+      index++;
+      setTimeout(autoSlide,2000)
+    }
+
+  </script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>image slider using javascript</title>
+
+    <script type="text/javascript">
+
+        var i=0;
+
+        var path=new Array();
+
+        path[0]="img/1.jpg";
+
+
+        path[1]="img/2.jpg";
+
+
+        path[2]="img/3.png";
+
+
+        path[3]="img/4.jpg";
+
+
+        path[4]="img/5.jpg";
+
+
+        path[5]="img/6.jpg";
+
+
+        path[6]="img/7.jpg";
+
+
+        function swapimage (){
+
+            document.slide.src=path[i];
+
+            if (i<path.length-1)
+
+                i++;
+
+            else
+
+                i=0;
+
+            setTimeout("swapimage()",1000);
+
+        }
+
+        window.onload=swapimage;
+
+    </script>
+
+    <style type="text/css">
+
+        body{
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        .box{
+
+            height: 100vh;
+
+            width: 100%;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<img class="box" name="slide" src="1.jpg">
+
+</body>
+
+</html>
+

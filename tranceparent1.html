@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>transparent dropdown menu</title>
+
+    <style type="text/css">
+
+        body{
+
+    background-image: url(../1.jpg);
+
+    background-size: cover;
+
+}
+
+ul{
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+ul li{
+
+    background-color: black;
+
+    width: 120px;
+
+    height: 30px;
+
+    float: left;
+
+    line-height: 30px;
+
+    margin-right: 5px;
+
+    text-align: center;
+
+    list-style-type: none;
+
+    opacity: 0.6;
+
+}
+
+
+ul li a{
+
+    color: #fff;
+
+    text-decoration: none;
+
+    display: block;
+
+}
+
+
+ul li a:hover{
+
+    background-color: green;
+
+}
+
+
+ul li ul li{
+
+    display: none;
+
+}
+
+
+ul li:hover ul li{
+
+    display: block;
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">Gallery</a>
+
+            <ul>
+
+                <li><a href="#">Digital marketing</a></li>
+
+                <li><a href="#">Programming</a></li>
+
+                <li><a href="#">Designing</a></li>
+
+                <li><a href="#">Hacking</a></li>
+
+            </ul>
+
+        </li>
+
+        <li><a href="#">Courses</a>
+
+            <ul>
+
+                <li><a href="#">Digital marketing</a></li>
+
+                <li><a href="#">Programming</a></li>
+
+                <li><a href="#">Designing</a></li>
+
+                <li><a href="#">Hacking</a></li>
+
+            </ul>
+
+        </li>
+
+        <li><a href="#">About</a></li>
+
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+
+</body>
+
+</html>
